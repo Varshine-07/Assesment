@@ -3,9 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Head</h1>
+    <h1>FORM</h1>
+    <div class="nav">
+        <li>Home</li>
+        <li>About</li>
+        <li>Service</li>
+        <li>Contact</li>
+    </div>
+<form>
+         <br>
+        <label for="name">Name: </label>
+        <input type="text" id="name">
+        <br><br>
+        <label for="email">Email: </label>
+        <input type="text" id="email">
+        <br><br>
+        <label for="registerNumber">Register Number: </label>
+        <input type="text" id="registerNumber">
+        <br><br>
+        <label for="department">Department: </label>
+        <input type="text" id="department">
+</form>
+    <br><br>
+    <button onclick="showDetails()">Submit</button>
+    <h2 id="result"></h2>
+<script>
+        function showDetails() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const registernumber = document.getElementById('registerNumber').value;
+            const department = document.getElementById('department').value;
+
+            const message = `Name: ${name}<br>Email: ${email}<br>Register Number: ${registernumber}<br>Department: ${department}`;
+            document.getElementById('result').innerHTML = message;
+        }
+</script>
 </body>
 </html>
